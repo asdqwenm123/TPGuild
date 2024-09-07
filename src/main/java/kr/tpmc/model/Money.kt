@@ -24,7 +24,7 @@ class Money(
     fun makeScheduledWithdrawal() {
         if (nextWithdrawalDate.isBefore(LocalDateTime.now())) {
             val amount = guild.memberList.members.count().toLong() * MAINTENANCE_COST
-            println(amount)
+//            println(amount)
             val result = withdraw(amount)
 
             if (result.isError) {
